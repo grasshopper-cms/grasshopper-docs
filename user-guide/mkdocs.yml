@@ -14,3 +14,5 @@ pages:
 - Common Scenarios:
   - The User Object: 'usage/user.md'
   - Making Queries: 'usage/queries.md'
+- Advanced:
+  - Contribution Guide: 'contribution-guide.md'
