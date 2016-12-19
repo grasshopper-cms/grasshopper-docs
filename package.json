@@ -1,6 +1,6 @@
 {
   "name": "grasshopper-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Docs are available at: http://docs.grasshopper.ws/",
   "main": "index.js",
   "scripts": {
