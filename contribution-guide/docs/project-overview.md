@@ -5,3 +5,5 @@
 * grasshopper-cms
 * grasshopper-api
 * grasshopper-core
+
+* grasshopper-admin
