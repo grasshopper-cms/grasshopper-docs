@@ -1,0 +1,21 @@
+{
+  "name": "grasshopper-docs",
+  "version": "1.0.0",
+  "description": "Docs are available at: http://docs.grasshopper.ws/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd contribution-guide && mkdocs build && cd ../user-guide && mkdocs build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grasshopper-cms/grasshopper-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grasshopper-cms/grasshopper-docs/issues"
+  },
+  "homepage": "https://github.com/grasshopper-cms/grasshopper-docs#readme"
+}

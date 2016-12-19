@@ -1,6 +1,11 @@
 # User Guide Docs
 
+Docs are available at: http://docs.grasshopper.ws/
+
 These docs are built using [mkdocs](http://www.mkdocs.org/).
+
+`npm run build` to build both sets of docs from the project root.
+
 
 [Install mkdocs with pip](http://www.mkdocs.org/#installation).
 

@@ -1,0 +1,59 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Grasshopper Contribution Guide", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#grasshopper-contribution-guide", 
+            "text": "", 
+            "title": "Grasshopper Contribution Guide"
+        }, 
+        {
+            "location": "/dev-workflow/", 
+            "text": "Dev Workflow\n\n\nFrom a fresh clone:\n\n\n\n\ngit clone \nGrasshopper Api\n.\n\n\ncd \ngrasshopper-api-js\n\n\nnpm install\n\n\nthe first time you do this, you will probably also want to load in some default testing data: run \ndemo/bin/dataLoad\n\n\nwhen you are ready, run \nbin/start\n and this will open up a server that is listening on port \n3008\n\n\nTo login to admin use username : \nadmin\nand password : \nTestPassword\n\n\n\n\nHandle data changes.\n\n\nYou will probably want to use and modify the test data while you add new features and debug admin.\nTo load test data into your local GH instance run \ndemo/bin/dataLoad\n\nTo save data from your local instance into this repo so others can use it run \ndemo/bin/dataSave\n. You will want to commit this data change.\n\n\nAdding new Tabs:\n\n\nAdding new pages to the stage:\n\n\nAdding data to the custom page :", 
+            "title": "Dev Workflow"
+        }, 
+        {
+            "location": "/dev-workflow/#dev-workflow", 
+            "text": "", 
+            "title": "Dev Workflow"
+        }, 
+        {
+            "location": "/dev-workflow/#from-a-fresh-clone", 
+            "text": "git clone  Grasshopper Api .  cd  grasshopper-api-js  npm install  the first time you do this, you will probably also want to load in some default testing data: run  demo/bin/dataLoad  when you are ready, run  bin/start  and this will open up a server that is listening on port  3008  To login to admin use username :  admin and password :  TestPassword", 
+            "title": "From a fresh clone:"
+        }, 
+        {
+            "location": "/dev-workflow/#handle-data-changes", 
+            "text": "You will probably want to use and modify the test data while you add new features and debug admin.\nTo load test data into your local GH instance run  demo/bin/dataLoad \nTo save data from your local instance into this repo so others can use it run  demo/bin/dataSave . You will want to commit this data change.", 
+            "title": "Handle data changes."
+        }, 
+        {
+            "location": "/dev-workflow/#adding-new-tabs", 
+            "text": "", 
+            "title": "Adding new Tabs:"
+        }, 
+        {
+            "location": "/dev-workflow/#adding-new-pages-to-the-stage", 
+            "text": "", 
+            "title": "Adding new pages to the stage:"
+        }, 
+        {
+            "location": "/dev-workflow/#adding-data-to-the-custom-page", 
+            "text": "", 
+            "title": "Adding data to the custom page :"
+        }, 
+        {
+            "location": "/generating-docs/", 
+            "text": "Generating Docs\n\n\nThe Grasshopper documentation is built with \nmkdocs\n. \nMkdocs is a simple way to use markdown to build docs.\n\n\nTo add to the docs you have to:\n\n\n\n\n\n\nInstall mkdocs:\n\n\npip install mkdocs\n \n\n\n(You will need \npython\n\n and pip. Pip can be installed with \nsudo easy_install pip\n)\n\n\n\n\n\n\nmkdocs serve\n\n\n\n\nOpen \nhttp://localhost:8000\n\n\nStart editing the files in the \ndocs/\n dir and \nmkdocs.yml\n in the project root.\n\n\n\n\nThe idea behind using mkdocs is that it is flexible and easy to use. We've\ntried jsdoc, apidoc, docco and other inline documentation. The problem\nwith those is that they tend to make the code harder to read, and that\nyou end up with very well documentated methods with no overall context.\n\n\nThese docs are meant to be like a guide with specific examples and pointers\nto the code.\n\n\nTo add a new page to the docs, looks at \nmkdocs.yml\n.", 
+            "title": "Generating Docs"
+        }, 
+        {
+            "location": "/generating-docs/#generating-docs", 
+            "text": "The Grasshopper documentation is built with  mkdocs . \nMkdocs is a simple way to use markdown to build docs.  To add to the docs you have to:    Install mkdocs:  pip install mkdocs    (You will need  python \n and pip. Pip can be installed with  sudo easy_install pip )    mkdocs serve   Open  http://localhost:8000  Start editing the files in the  docs/  dir and  mkdocs.yml  in the project root.   The idea behind using mkdocs is that it is flexible and easy to use. We've\ntried jsdoc, apidoc, docco and other inline documentation. The problem\nwith those is that they tend to make the code harder to read, and that\nyou end up with very well documentated methods with no overall context.  These docs are meant to be like a guide with specific examples and pointers\nto the code.  To add a new page to the docs, looks at  mkdocs.yml .", 
+            "title": "Generating Docs"
+        }
+    ]
+}
