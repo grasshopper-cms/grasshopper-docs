@@ -27,3 +27,4 @@ These docs are meant to be like a guide with specific examples and pointers
 to the code.
 
 To add a new page to the docs, looks at `mkdocs.yml`.
+

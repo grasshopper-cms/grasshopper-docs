@@ -3,7 +3,8 @@ site_name: Grasshopper Contribution Guide
 #theme: cinder
 pages:
 - Home: 'index.md'
+- Road Map: 'road-map.md'      
 - Project Overview: 'project-overview.md'
-- Dev Workflow: 'dev-workflow.md'
-- Generating Docs: 'generating-docs.md'
+- Dev Workflow: 
+    - Generating Docs: 'generating-docs.md'
 - User Guide: 'user-guide.md'

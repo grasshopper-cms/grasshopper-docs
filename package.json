@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd contribution-guide && mkdocs build && cd ../user-guide && mkdocs build"
+    "build": "cd contribution-guide && mkdocs build && cd ../user-guide && mkdocs build",
+    "contribution": "cd contribution-guide && mkdocs serve",
+    "user": "cd user-guide && mkdocs serve"
   },
   "repository": {
     "type": "git",
