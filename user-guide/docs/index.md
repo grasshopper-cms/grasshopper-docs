@@ -1,7 +1,7 @@
 # Grasshopper Developers Guide
 
 ## Introduction
-Welcome to Grasshopper, the world's greatest CMS.  As a developer, when you create a project using Grasshopper you will be making use of the Grasshopper API, in conjunction with NodeJS and probably ExpressJS too.  These docs are intended to explain the basic principles and usage cases of developing a Web App using Grasshoppper.
+Welcome to Grasshopper! The world's greatest CMS.  As a developer, when you create a project using Grasshopper you will be making use of the Grasshopper API, in conjunction with NodeJS and probably ExpressJS too.  These docs are intended to explain the basic principles and usage cases of developing a Web App using Grasshoppper.
 We will take you through the following:
 
 ## Installation
