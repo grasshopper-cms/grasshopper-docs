@@ -1,65 +1,98 @@
-# Grasshopper Developers Guide
+# Quick Start
 
-## Introduction
-Welcome to Grasshopper! The world's greatest CMS.  As a developer, when you create a project using Grasshopper you will be making use of the Grasshopper API, in conjunction with NodeJS and probably ExpressJS too.  These docs are intended to explain the basic principles and usage cases of developing a Web App using Grasshoppper.
-We will take you through the following:
+This is how to get started using Grasshopper.
 
-## Installation
-Installing grasshopper is done through NPM: 
-Grasshopper core handles the connection to the database and your queries.
-`npm install grasshopper-core`
-Grasshopper API is what developers interact with, as a wrapper for Grasshopper core. Grasshopper core is a dependency of Grasshopper API.
-`npm install grasshopper-api`
+Grasshopper is a headless CMS with an admin. It can be used to build both apis and websites.
 
-## Application structure
-Grasshopper uses configuration files in your application to run. Let's see how your application will look starting from scratch:
+To get started require grasshopper-cms and init with your config object:
 
- * package.json
- * application
-     * grasshopper-config.json
-     * app.js
-     * users.js
- * node_modules
-     * {various dependencs}
-
-## Setting up the Admin User
-To start using grasshopper, you'll have to set up an admin user. Admin users are configured in the following way:
 ```javascript
+const express = require('express');
+const app = express();
+const grasshopper = require('grasshopper-cms');
+
+
+grasshopper
+    .start({
+        app,
+        express,
+        // Other configs here
+    })
+    .then(result => {
+        
+        // Store the authenticated request on the npm's module for convenience
+        grasshopper.authenticatedRequest = result.authenticatedRequest;
+        
+        // Store the grasshopper object on the npm's module for convenience
+        grasshopper.grasshopper = result.grasshopper;
+        
+        // The admin needs the api - this will be automatically done in the future
+        app.use('/api', grasshopper.grasshopper.router);
+        
+        console.log('listening on port 3000');
+        app.listen(3000);
+    })
+    .catch(err => {
+        console.log('startup error', err);
+    })
+```
+
+For an example config object see the [grasshopper-demo](https://github.com/grasshopper-cms/grasshopper-demo/blob/master/index.js#L9).
+
+In the example above, `app` is a standard express app. You can set it up as you normally would for a website or api. 
+You can inform your models with queries via `grasshopper.authenticatedRequest`, and you can view the admin at https://localhost:3000/admin .
+
+## Queries
+
+Queries are promise based. Query content involves looking for content by `_id`, by querying for fields on the document, or query for meta
+data on the document.
+
+A Grasshopper content item has this form:
+
+```json
 {
-    _id: ObjectID('arbitrary id string (numeric?)'),
-    role: 'admin',
-    enabled: true,
-    firstname: 'Test',
-    lastname: 'User',
-    identities: {
-        basic: {
-            username: 'admin',
-            salt: 'd41d8cd98f00b204e9800998ecf8427e',
-            hash: '67a74306b06d0c01624fe0d0249a570f4d093747'
-        }
+    _id
+    fields : {
+        
     },
-    displayName : 'admin',
-    linkedIdentities : ['basic'],
-    email: 'email@email.com'
+    meta : {
+       type,
+       node,
+       labelfield,
+       typelabel,
+       created,
+       lastmodified
+    }
 }
 ```
-[See this page for a breakdown on the user object.](http://solid-interactive.github.io/grasshopper-core-nodejs/documentation.html#users)
 
-## Configuration
-Configuring grasshopper is simple, just add your environment configs.
+The keys for `meta` are stable. The keys for `fields` are defined in the admin by modifying the content type.
 
-[See this page for a breakdown of each of the configuration objects.](http://solid-interactive.github.io/grasshopper-core-nodejs/documentation.html#projectconfiguration)
-
-## Startup
-The `grunt server` task will start a local express server running the API.
+So querying all 
 
 ```javascript
-
+return ghService
+    .authenticatedRequest.content.query({
+        filters : [
+            {
+                key : 'fields.title',
+                cmp : '=',
+                value : 'My Post'
+            },
+            {
+                key : 'meta.typelabel',
+                cmp : '=',
+                value : 'Standard Post'
+            }
+        ],
+        nodes: [
+            // The id of the node
+            '58943396364f3b528af81f80'
+        ],
+        options : {
+            sort: {
+                'fields.title' : 1
+            }
+        }
+    })
 ```
-
-## App authentication
-## The Admin UI
-## Creating Content / Content Types
-## Managing Assets
-## The User
-## Making Queries
