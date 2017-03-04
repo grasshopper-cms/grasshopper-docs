@@ -2,8 +2,8 @@ site_name: Grasshopper User Guide
 #theme: material
 #theme: cinder
 pages:
-- Home: 'index.md'
-- Getting Started:
+- Quick Start: 'index.md'
+- Getting Setup:
   - Installation: 'installation.md'
   - Configuration: 'configs.md'
 - Basic Concepts:
