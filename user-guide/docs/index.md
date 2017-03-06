@@ -1,6 +1,6 @@
 # Quick Start
 
-This is how to get started using Grasshopper.
+This is how to get started using Grasshopper...
 
 Grasshopper is a headless CMS with an admin. It can be used to build both apis and websites.
 
