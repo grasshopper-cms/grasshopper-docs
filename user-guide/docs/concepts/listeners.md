@@ -3,7 +3,7 @@
 Listeners can be setup via grasshopper core:
 
 ```javascript
-grasshopper
+require('grasshopper-cms')
     .start(configs)
     .then(result => {
         // result.grasshopper.core is core
