@@ -49,7 +49,7 @@ are: `nodes`, `types`, `contentids`, `system`.
 
 Below are the gh method calls with their associated events:
 
-### [Assets]()
+### [Assets](#assets)
 
 #### [assets.copy]()
 * **Events:** parse, validate, out, copy
@@ -73,7 +73,7 @@ Below are the gh method calls with their associated events:
 * **Events:** parse, validate, out, save
 
 
-### [Content]()
+### [Content](#content)
 
 #### [content.deleteById]()
 * **Events:** parse, validate, out, delete
@@ -96,7 +96,7 @@ Below are the gh method calls with their associated events:
 #### [content.update]()
 * **Events:** parse, validate, out, save
 
-### [Content Types]()
+### [Content Types](#content-types)
 
 #### [contentTypes.deleteById]()
 * **Events:**  parse, validate, out, delete
@@ -116,7 +116,7 @@ Below are the gh method calls with their associated events:
 #### [contentTypes.query]()
 * **Events:** out
 
-### [Nodes]()
+### [Nodes](#nodes)
 
 #### [nodes.deleteById]()
 * **Events:** parse, validate, out, delete
@@ -142,7 +142,7 @@ Below are the gh method calls with their associated events:
 #### [nodes.update]()
 * **Events:** parse, validate, out, save
 
-### [Tokens]()
+### [Tokens](#tokens)
 
 #### [tokens.deleteById]()
 * **Events:** parse, validate, out, delete
@@ -156,7 +156,7 @@ Below are the gh method calls with their associated events:
 #### [tokens.logout]()
 * **Events:** parse, validate, out
 
-### [Users](/grasshopper-core-nodejs/documentation.html#users)
+### [Users](#users)
 
 #### [users.deleteById]()
 * **Events:** parse, validate, out, delete
