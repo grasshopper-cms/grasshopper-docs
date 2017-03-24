@@ -6,4 +6,5 @@ pages:
 - Project Overview: 'project-overview.md'
 - Dev Workflow: 
     - Generating Docs: 'generating-docs.md'
+    - Updating Admin: 'updating-admin.md'
 - User Guide: 'user-guide.md'
