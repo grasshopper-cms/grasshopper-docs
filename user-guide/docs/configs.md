@@ -23,7 +23,8 @@ The following configs can be passed in via gh-cms:
         username: 'the-admin-username',
         passowrd: 'the-admin-password'
     },
-    adminMountPoint, // route admin is at. e.g. if 'admin' then it'll be at /admin
+    adminMountPoint, // route admin is at. default is /admin
+    apiMountPoint, // route api is at. default is /api
     mode: 'develop', // develop mode give extra debugging
     env,
     grasshopper: {
