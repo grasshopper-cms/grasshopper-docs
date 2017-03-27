@@ -90,3 +90,7 @@ return ghService
         }
     })
 ```
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/index.md)
