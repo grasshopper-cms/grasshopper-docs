@@ -4,7 +4,6 @@ site_name: Grasshopper User Guide
 pages:
 - Quick Start: 'index.md'
 - Getting Setup:
-  - Installation: 'installation.md'
   - Configuration: 'configs.md'
 - Concepts:
    - Listeners: 'concepts/listeners.md'
