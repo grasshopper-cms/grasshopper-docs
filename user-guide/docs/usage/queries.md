@@ -241,4 +241,8 @@ app.ghCore.request(token.get()).content.query({
                  }
              ]
         })
-```        
+```       
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/usage/queries.md)
