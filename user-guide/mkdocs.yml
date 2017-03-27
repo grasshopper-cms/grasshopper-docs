@@ -7,11 +7,8 @@ pages:
   - Installation: 'installation.md'
   - Configuration: 'configs.md'
 - Basic Concepts:
-#  - App authentication: 'concepts/app-auth.md'
-#  - The Admin UI: 'concepts/admin-ui.md'
-#  - Content / Content Types: 'concepts/content.md'
-#  - Managing Assets: 'concepts/assets.md'
    - Listeners: 'concepts/listeners.md'
+   - Plugins: 'concepts/plugins.md'
 - Common Scenarios:
   - The User Object: 'usage/user.md'
   - Making Queries: 'usage/queries.md'
