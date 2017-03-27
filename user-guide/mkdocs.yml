@@ -6,10 +6,10 @@ pages:
 - Getting Setup:
   - Installation: 'installation.md'
   - Configuration: 'configs.md'
-- Basic Concepts:
+- Concepts:
    - Listeners: 'concepts/listeners.md'
    - Plugins: 'concepts/plugins.md'
-- Common Scenarios:
+- Usage:
   - Making Queries: 'usage/queries.md'
 - Advanced:
   - Contribution Guide: 'contribution-guide.md'
