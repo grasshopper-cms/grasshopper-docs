@@ -71,4 +71,4 @@ The following configs are passed to `grasshopper-api` via the cms:
 
 ---
 
-[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/configs.md)
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/usage/configs.md)
