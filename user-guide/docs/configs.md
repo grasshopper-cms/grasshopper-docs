@@ -68,3 +68,7 @@ The following configs are passed to `grasshopper-api` via the cms:
 * `sessions` 
     * set to truthy if you want cookies managed sessions
     * default: `undefined` 
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/configs.md)
