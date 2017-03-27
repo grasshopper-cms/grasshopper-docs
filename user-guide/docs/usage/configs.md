@@ -18,16 +18,15 @@ The following configs can be passed in via gh-cms:
 {
     app, // the express app
     express, // express itself
-    plugins: [], // an array of plugins to load
     admin : {
         username: 'the-admin-username',
         passowrd: 'the-admin-password'
     },
-    adminMountPoint, // route admin is at. default is /admin
-    apiMountPoint, // route api is at. default is /api
     mode: 'develop', // develop mode give extra debugging
     env,
     grasshopper: {
+      adminMountPoint, // route admin is at. default is /admin
+      apiMountPoint, // route api is at. default is /api    
       assets,
       crypto,
       db: {
@@ -38,6 +37,14 @@ The following configs can be passed in via gh-cms:
          database:  'grasshopper-demo',
          debug:  true
       },
+      plugins: [
+        {
+          name: 'test',
+          label: 'Test Plugin',
+          icon: 'fa-user',
+          path: path.join(__dirname, './plugins/test')      
+        }
+      ], // an array of plugins to load
       server: {
          proxy: true,
          host:  'localhost',
