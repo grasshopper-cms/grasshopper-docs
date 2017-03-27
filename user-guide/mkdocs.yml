@@ -7,7 +7,7 @@ pages:
    - Listeners: 'concepts/listeners.md'
    - Plugins: 'concepts/plugins.md'
 - Usage:
-  - Configuration: 'configs.md'
+  - Configuration: 'usage/configs.md'
   - Making Queries: 'usage/queries.md'
 - Advanced:
   - Contribution Guide: 'contribution-guide.md'
