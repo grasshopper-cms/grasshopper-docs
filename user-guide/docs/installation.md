@@ -63,3 +63,7 @@ The `grunt server` task will start a local express server running the API.
 ## Managing Assets
 ## The User
 ## Making Queries
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/installation.md)
