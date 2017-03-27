@@ -36,3 +36,7 @@ grasshopper.core.db.content.model.collection.find({
     $text: {
         $search: term}}).toArray()
 ```
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/core.md)
