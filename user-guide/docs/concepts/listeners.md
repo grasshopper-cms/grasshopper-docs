@@ -185,4 +185,6 @@ Below are the gh method calls with their associated events:
 #### [users.update]()
 * **Events:** parse, validate, out, save
 
+---
 
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/concepts/listeners.md)
