@@ -31,3 +31,5 @@ grasshopper
 
 The order of method calls is important here. You want to make sure you call this downstream from starting grasshopper,
 otherwise you will password protect the login page too.
+---
+[Edit this Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/user-guide/docs/usage/authentication.md)
