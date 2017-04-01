@@ -24,7 +24,7 @@ grasshopper
                res.loginRedirect = `/admin/login?redirect=${req.originalUrl}`;
                next();
            },
-           require('../node_modules/grasshopper-cms/plugins/admin/src/middlewares/auth.middleware')
+           require('grasshopper-cms/plugins/admin/src/middlewares/auth.middleware')
        ]); 
     });
 ```
