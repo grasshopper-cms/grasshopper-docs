@@ -48,6 +48,17 @@ Object. Possible key/value pairs are:
 The options object can have include or exclude parameters, but not both in the same query.
 When using 'options.distinct', filters can't be used. This means paging is not available.
 
+## QueryFull
+
+You can query a piece of content so that all content references are followed and filled in:
+
+```javascript
+grasshopper
+    .request(token)
+    .content.queryFull(aQuery)
+```
+
+
 ## Examples
 
 In the following examples, "request" is the configured grasshopper request object
