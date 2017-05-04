@@ -103,7 +103,10 @@ grasshopper.core.db.content.model.collection
 // so you can do stuff like
 grasshopper.core.db.content.model.collection.find({
     $text: {
-        $search: term}}).toArray()
+        $search: term}}).toArray();
+
+// add an index        
+grasshopper.core.db.content.model.collection.ensureIndex('fields.slug' (err, res) => { console.log(err, res); });        
 ```
 
 ---
