@@ -96,7 +96,7 @@ return ghService
 
 To access raw mongo:
 
-```
+```javascript
 // access to mongo driver
 grasshopper.core.db.content.model.collection
 
@@ -106,7 +106,8 @@ grasshopper.core.db.content.model.collection.find({
         $search: term}}).toArray();
 
 // add an index        
-grasshopper.core.db.content.model.collection.ensureIndex('fields.slug' (err, res) => { console.log(err, res); });        
+grasshopper.core.db.content.model.collection
+    .ensureIndex('fields.slug' (err, res) => { console.log(err, res); });        
 ```
 
 ---
