@@ -22,6 +22,14 @@ require('grasshopper-cms')
                     // this plugin gets no ui in the admin
                     name : 'headless',
                     path: path.join(__dirname, './plugins/headless')
+                },
+                {
+                    // this plugin template is server-rendered
+                    name : 'server-rendered',
+                    path: path.join(__dirname, './plugins/server-rendered'),
+                    icon: 'fa-server',
+                    label: 'Server Rendered',
+                    template: 'template.pug'
                 }
             ],
             ...
@@ -36,6 +44,8 @@ This mean that in a `startup.js` file you can do arbitrary setup work and / or c
 The endpoints created can be used in conjunction with the admin ui.
 
 To create the admin UI you need two files. A front end JS file and a CSS file.
+
+Alternatively, you can render a pug template by including the path to the pug file in the `template` option. At the top of the file, extend the admin layout with `extends /plugin.layout.pug`. In your `startup.js`, attach a middleware to your router on `.get` and load any data needed for your template.
 
 Each plugin can have a `public` directory. Content of this `public` directory will be served at:
 `${adminMountPoint}/${plugin.name}`. The JS file should be in `public/scripts/main.js`. The CSS file should be in
