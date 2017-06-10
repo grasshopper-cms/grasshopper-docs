@@ -10,7 +10,7 @@ A plugin is a directory whose path is passed in as an option of `grasshopper-cms
 require('grasshopper-cms')
     .start({
         ...,
-        grasshopper : {
+        grasshopper: {
             plugins: [
                 {
                     name: 'test',
@@ -20,12 +20,12 @@ require('grasshopper-cms')
                 },
                 {
                     // this plugin gets no ui in the admin
-                    name : 'headless',
+                    name: 'headless',
                     path: path.join(__dirname, './plugins/headless')
                 },
                 {
                     // this plugin template is server-rendered
-                    name : 'server-rendered',
+                    name: 'server-rendered',
                     path: path.join(__dirname, './plugins/server-rendered'),
                     icon: 'fa-server',
                     label: 'Server Rendered',
@@ -36,22 +36,71 @@ require('grasshopper-cms')
         }
     })
 ```
+## Options
+#### `path`: required
 
-A plugin can have an optional `startup.js` file. This file can synchronously or asynchrounously
-return an express router. This express router will be attached to `${options.grasshopper.adminMountPoint}/${plugin.name}`.
+The path to the plugin's directory.
 
-This mean that in a `startup.js` file you can do arbitrary setup work and / or create a router to use.
-The endpoints created can be used in conjunction with the admin ui.
+#### `name`: required
 
-To create the admin UI you need two files. A front end JS file and a CSS file.
+The slug of the plugin.
 
-Alternatively, you can render a pug template by including the path to the pug file in the `template` option. At the top of the file, extend the admin layout with `extends /plugin.layout.pug`. In your `startup.js`, attach a middleware to your router on `.get` and load any data needed for your template.
+#### `label`: optional
 
-Each plugin can have a `public` directory. Content of this `public` directory will be served at:
-`${adminMountPoint}/${plugin.name}`. The JS file should be in `public/scripts/main.js`. The CSS file should be in
-`public/styles/main.css`.
+The label of the plugin used in the admin sidebar.
 
-The icon field can be a font awesome icon and the label field will be displayed in the left hand sidebar of the admin.
+#### `icon`: optional
+
+The icon paired with the label in the sidebar.
+
+#### `template`: optional
+
+The path to the plugin's server-rendered pug template, relative to the plugin's directory.
+
+## Example
+
+All plugin files are optional.
+
+```
+plugins
+|   plugin-name
+    |   startup.js // name not configurable
+    |   template.pug // name configurable with template option
+    |   public
+        |   scripts
+            |   main.js
+        |   styles
+            |   main.css
+    
+```
+
+#### `startup.js`
+
+This file can synchronously or asynchrounously `return` an express router. This express router will be attached to `${options.grasshopper.adminMountPoint}/${plugin.name}`. Use this to do any arbitrary setup work and / or create a router to use. The endpoints created can be used in conjunction with the admin ui.
+
+#### `template.pug`
+
+required format:
+
+```
+extends /plugin.layout.pug
+
+block app
+    .your.pug.here
+```
+
+Load data into your template by attaching a `.get` middleware to your `startup.js` router.
+
+#### `public`
+
+These files are statically served at `${adminMountPoint}/${plugin.name}`
+
+##### `/scripts/main.js`
+
+Automatically included on the plugin page. Use this to spin up a javascript app.
+
+##### `/styles/main.css`
+Automatically included on the plugin page. Use this to style your plugin page.
 
 To see the examples above in action, check out the [demo app](https://github.com/grasshopper-cms/grasshopper-demo/tree/master/plugins).
 
