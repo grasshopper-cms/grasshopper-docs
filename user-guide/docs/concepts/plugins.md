@@ -71,12 +71,26 @@ plugins
             |   main.js
         |   styles
             |   main.css
-    
 ```
 
 #### `startup.js`
 
-This file can synchronously or asynchrounously `return` an express router. This express router will be attached to `${options.grasshopper.adminMountPoint}/${plugin.name}`. Use this to do any arbitrary setup work and / or create a router to use. The endpoints created can be used in conjunction with the admin ui.
+Required format:
+
+```
+/**
+ * @param {Object} grasshopper - The grasshopper app
+ * @param {Object} grasshopper.grasshopper - The grasshopper api
+ * @param {Object} grasshopper.authenticatedRequest - The grasshopper database connection
+ * @param {Object} grasshopper.middlewares - Built in middlewares
+ * @param {Object} app - The express app
+ */
+module.exports = function(grasshopper, app) {
+    // do whatever you want here
+}
+```
+
+Startup can synchronously or asynchrounously return an express router. This express router will be attached to `${options.grasshopper.adminMountPoint}/${plugin.name}`. Use this to do any arbitrary setup work and / or create a router to use. The endpoints created can be used in conjunction with the admin ui.
 
 #### `template.pug`
 
