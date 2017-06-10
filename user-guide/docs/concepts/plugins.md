@@ -84,6 +84,7 @@ Required format:
  * @param {Object} grasshopper.authenticatedRequest - The grasshopper database connection
  * @param {Object} grasshopper.middlewares - Built in middlewares
  * @param {Object} app - The express app
+ * @returns {function} [router] - Optionally return an express router.
  */
 module.exports = function(grasshopper, app) {
     // do whatever you want here
