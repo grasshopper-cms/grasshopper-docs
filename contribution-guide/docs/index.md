@@ -9,6 +9,10 @@ Things to work on can be found in the issues sections of each project:
 * [Grasshopper-Docs](https://github.com/grasshopper-cms/grasshopper-docs/issues)
 * [Grasshopper-Cli](https://github.com/Solid-Interactive/grasshopper-cli/issues)
 
+## Release
+
+For each release, make sure you update the [Grasshopper-CMS release notes](https://github.com/grasshopper-cms/grasshopper-cms/blob/master/RELEASE-NOTES.md)
+
 ## Direction
 
 ### Grasshoper-CMS
@@ -30,4 +34,7 @@ The user-guide should be finished out so that no reference are made to the old d
 
 Finishing [multiple collections](https://github.com/Solid-Interactive/grasshopper-core-nodejs/issues/96) is the highest priority. [Updating to use BB and latest Mongoose](https://github.com/Solid-Interactive/grasshopper-core-nodejs/issues/82) should be quick and will help avoid some hard to trace bugs.
 
+--- 
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/contribution-guide/docs/index.md)
 
