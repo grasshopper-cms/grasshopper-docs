@@ -17,6 +17,8 @@ To access the admin:
 |---|---|
 | admin | TestPassword |
 
+If you want to pull in a non minified version of the admin, pass in `mode: 'develop'` as an option.
+
 Once done with your changes:
 
 1. run `bin/minify.js` from grasshopper-cms/plugins/admin. This will minify your updates.
