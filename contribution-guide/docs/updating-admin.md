@@ -11,9 +11,19 @@ Updating admin should be done in [Grasshopper-CMS](https://github.com/grasshoppe
 
 At this point you are able to view the admin at http://localhost:3000/admin . Make your updates to grasshopper-cms/plugins/admin/src
 
+To access the admin:
+
+| Username | Password |
+|---|---|
+| admin | TestPassword |
+
 Once done with your changes:
 
 1. run `bin/minify.js` from grasshopper-cms/plugins/admin. This will minify your updates.
 
 Now you are ready to publish. Semantic version bump, git commit, and do an `npm publish` from grasshopper-cms. Then bump the
 grasshopper-cms version number in grasshopper-demo.
+
+---
+
+[Edit Page](https://github.com/grasshopper-cms/grasshopper-docs/edit/master/contribution-guide/docs/updating-admin.md)
