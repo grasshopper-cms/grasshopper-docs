@@ -9,6 +9,7 @@ pages:
 - Usage:
   - Authentication: 'usage/authentication.md'
   - Configuration: 'usage/configs.md'
+  - Help: 'usage:/help.md'
   - Making Queries: 'usage/queries.md'
 - Advanced:
   - Contribution Guide: 'contribution-guide.md'
