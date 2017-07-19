@@ -20,7 +20,7 @@ The following configs can be passed in via gh-cms:
     express, // express itself
     admin : {
         username: 'the-admin-username',
-        passowrd: 'the-admin-password'
+        password: 'the-admin-password'
     },
     mode: 'develop', // develop mode give extra debugging
     env,
@@ -66,6 +66,41 @@ The following configs can be passed in via gh-cms:
 
 The following configs are passed to `grasshopper-api` via the cms:
 
+* `grasshopper.assets`
+   * this is used to define whether using s3 or the local disk to store images
+   
+```   
+"assets": {
+    "default" : "local",
+    "tmpdir" : "{absolute path to tmp directory}",
+    "engines": {
+        "local":{
+            "path":"{absolute path to public asset folder}",
+            "urlbase":"{full url base to serve files from}"
+        }
+    }
+}
+```
+
+default : This determines which engine will serve assets
+tmpdir : Absolute path on your local system where temporary files will be saved. Make sure it has correct permissions.
+engines : Each engine listed will be used for creating and updating assets, but only the one listed in default will be used for serving assets.   
+
+```
+            assets: {
+                default: 'amazon',
+                engines: {
+                    local: {
+                        accessKeyId:  variables.aws.accessKeyId,
+                        bucket:  variables.aws.bucket,
+                        region:  variables.aws.region,
+                        secretAccessKey:  variables.aws.secretAccessKey,
+                        urlbase:  variables.aws.urlbase
+                    }
+                }
+            },
+```
+   
 * `grasshopper.server`
     * this can be left out altogether or passed in as an object
     * `grasshopper.server.proxy` if `grasshopper.server.proxy === true` then a router will be returned from initializing grasshopper api, and no standalone express app will be created. This is meant to be used in the case you have an express app you want to mount the grasshopper api router on.
@@ -74,7 +109,8 @@ The following configs are passed to `grasshopper-api` via the cms:
     * `grasshopper.server.https.cert` relative path too ssl cert file from `process.cwd()` 
 * `sessions` 
     * set to truthy if you want cookies managed sessions
-    * default: `undefined` 
+    * default: `undefined`
+  
 
 ---
 
