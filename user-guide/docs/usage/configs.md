@@ -97,9 +97,12 @@ engines : Each engine listed will be used for creating and updating assets, but 
                         secretAccessKey:  variables.aws.secretAccessKey,
                         urlbase:  variables.aws.urlbase
                     }
-                }
+                },
+                "filenameSpaceReplacement": "-"
             },
 ```
+
+filenameSpaceReplacement : When uploading assets to Amazon S3, spaces in filenames will be replaced with the character(s) provided here.
    
 * `grasshopper.server`
     * this can be left out altogether or passed in as an object
